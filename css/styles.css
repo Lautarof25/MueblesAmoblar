@@ -625,6 +625,64 @@ button {
     transform: scale(1.06);
 }
 
+
+/* =========================================
+   WHATSAPP FLOTANTE
+========================================= */
+
+.floating-whatsapp {
+    position: fixed;
+    z-index: 50;
+    right: 22px;
+    bottom: 22px;
+
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+
+    min-height: 50px;
+    padding: 8px 16px 8px 9px;
+
+    border: 1px solid rgba(255,255,255,.22);
+    border-radius: 100px;
+
+    background: var(--blue-dark);
+    box-shadow: 0 12px 28px rgba(37,76,91,.28);
+
+    color: var(--white);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: .02em;
+
+    transition: var(--transition);
+}
+
+.floating-whatsapp-icon {
+    display: grid;
+    place-items: center;
+
+    width: 32px;
+    height: 32px;
+
+    border-radius: 50%;
+
+    background: var(--blue-light);
+    color: var(--blue-dark);
+    font-size: 18px;
+    line-height: 1;
+}
+
+.floating-whatsapp:hover,
+.floating-whatsapp:focus-visible {
+    background: var(--blue);
+    outline: none;
+    transform: translateY(-3px);
+}
+
+.floating-whatsapp:focus-visible {
+    box-shadow: 0 0 0 3px var(--white), 0 0 0 5px var(--blue);
+}
+
 @media (max-width: 600px) {
 
     .image-modal {
@@ -638,6 +696,11 @@ button {
     .image-modal-close {
         top: -12px;
         right: -8px;
+    }
+
+    .floating-whatsapp {
+        right: 16px;
+        bottom: 16px;
     }
 
 }
