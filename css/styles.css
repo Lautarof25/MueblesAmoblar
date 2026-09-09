@@ -448,7 +448,9 @@ button {
 }
 
 
-/* SECCIONES RESERVADAS */
+/* =========================================
+    QUIÉNES SOMOS
+========================================= */
 
 .future-section {
     height: 560px;
@@ -458,6 +460,126 @@ button {
 
 .future-about {
     background: var(--blue-soft);
+}
+
+.about-section {
+    display: grid;
+    grid-template-columns: minmax(0, .92fr) minmax(0, 1.08fr);
+    gap: clamp(36px, 7vw, 112px);
+    align-items: center;
+    padding: 96px 24px 104px;
+    background: var(--blue-soft);
+}
+
+.about-image-wrap,
+.about-content {
+    width: 100%;
+    max-width: 1180px;
+}
+
+.about-image-wrap {
+    position: relative;
+    justify-self: end;
+    overflow: hidden;
+    background: var(--blue-dark);
+    box-shadow: 18px 18px 0 var(--blue-light);
+}
+
+.about-image {
+    display: block;
+    width: 100%;
+    aspect-ratio: 4 / 5;
+    object-fit: cover;
+    filter: saturate(.82);
+}
+
+.about-image-label {
+    position: absolute;
+    right: 16px;
+    bottom: 16px;
+    padding: 8px 11px;
+    background: rgba(24,33,36,.78);
+    color: var(--white);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+}
+
+.about-content {
+    justify-self: start;
+}
+
+.about-content h2 {
+    max-width: 640px;
+    color: var(--blue-dark);
+    font-size: clamp(42px, 6vw, 76px);
+    line-height: .92;
+    letter-spacing: -.05em;
+}
+
+.about-content h2 span {
+    display: block;
+    color: var(--blue);
+}
+
+.about-lead {
+    max-width: 520px;
+    margin-top: 24px;
+    color: var(--blue-dark);
+    font-size: 17px;
+    line-height: 1.55;
+}
+
+.about-message {
+    position: relative;
+    overflow: hidden;
+    max-width: 620px;
+    margin-top: 28px;
+    padding: 30px 34px 32px;
+    border-left: 5px solid var(--blue-light);
+    background: var(--blue);
+    color: var(--white);
+    font-family: "Poiret One", cursive;
+    font-size: clamp(27px, 3vw, 42px);
+    line-height: 1.18;
+}
+
+.about-message::before {
+    position: absolute;
+    top: -24px;
+    right: 18px;
+    color: rgba(255,255,255,.2);
+    content: "\201C";
+    font-family: Georgia, serif;
+    font-size: 132px;
+    line-height: 1;
+}
+
+.about-pillars {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 18px;
+    margin-top: 42px;
+    padding-top: 22px;
+    border-top: 1px solid rgba(37,76,91,.2);
+}
+
+.about-pillar {
+    display: grid;
+    gap: 7px;
+}
+
+.about-pillar strong {
+    color: var(--blue-dark);
+    font-size: 12px;
+    letter-spacing: .02em;
+}
+
+.about-pillar span {
+    color: rgba(24,33,36,.66);
+    font-size: 12px;
+    line-height: 1.45;
 }
 
 .future-before-after {
@@ -1507,6 +1629,30 @@ button {
 ========================================= */
 
 @media (max-width: 899px) {
+
+    .about-section {
+        grid-template-columns: 1fr;
+        gap: 48px;
+        padding: 72px 20px 84px;
+    }
+
+    .about-image-wrap,
+    .about-content {
+        justify-self: stretch;
+    }
+
+    .about-image-wrap {
+        box-shadow: 12px 12px 0 var(--blue-light);
+    }
+
+    .about-image {
+        aspect-ratio: 4 / 3;
+    }
+
+    .about-pillars {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
 
     .contact-section {
         grid-template-columns: 1fr;
