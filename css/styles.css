@@ -1,0 +1,817 @@
+/* =========================================
+   VARIABLES
+========================================= */
+
+:root {
+    --blue: #619bb1;
+    --blue-dark: #344a53;
+    --blue-light: #97afb9;
+
+    --wood-light: #af8c71;
+    --wood: #795a41;
+
+    --cream: #f4efe9;
+    --white: #ffffff;
+    --black: #182124;
+
+    --radius: 24px;
+    --transition: 0.5s cubic-bezier(.22, .61, .36, 1);
+}
+
+
+/* =========================================
+   RESET
+========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: var(--cream);
+    color: var(--black);
+    font-family: Arial, Helvetica, sans-serif;
+    overflow-x: hidden;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+button {
+    font: inherit;
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.header {
+    position: absolute;
+    z-index: 20;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 18px 20px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+
+    width: 120px;
+    height: 52px;
+
+    padding: 7px 12px;
+
+    background: rgba(255,255,255,.82);
+
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+
+    border-radius: 14px;
+}
+
+.logo img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: contain;
+}
+
+
+/* =========================================
+   MENU BUTTON
+========================================= */
+
+.menu-button {
+    width: 52px;
+    height: 52px;
+
+    border: 1px solid rgba(255,255,255,.45);
+
+    border-radius: 50%;
+
+    background: rgba(52,74,83,.72);
+
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 6px;
+
+    cursor: pointer;
+
+    transition: var(--transition);
+}
+
+.menu-button span {
+    display: block;
+
+    width: 19px;
+    height: 1.5px;
+
+    background: white;
+
+    transition: var(--transition);
+}
+
+.menu-button:hover {
+    transform: rotate(8deg) scale(1.05);
+}
+
+
+/* =========================================
+   HERO
+========================================= */
+
+.hero {
+    position: relative;
+
+    height: 47svh;
+    min-height: 480px;
+
+    overflow: hidden;
+
+    display: flex;
+    align-items: flex-end;
+
+    color: white;
+}
+
+
+/* FOTO */
+
+.hero-image {
+    position: absolute;
+    inset: 0;
+
+    background-image: url("../hero.jpeg");
+    background-size: cover;
+    background-position: center center;
+
+    transform: scale(1.015);
+
+    animation: heroReveal 1.4s ease-out both;
+}
+
+
+/* OVERLAY */
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(24,33,36,.78) 0%,
+            rgba(24,33,36,.46) 38%,
+            rgba(24,33,36,.08) 75%,
+            rgba(24,33,36,.18) 100%
+        ),
+        linear-gradient(
+            0deg,
+            rgba(24,33,36,.58) 0%,
+            rgba(24,33,36,0) 55%
+        );
+}
+
+
+/* CONTENIDO */
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+
+    width: 100%;
+
+    padding:
+        0
+        24px
+        42px;
+}
+
+.hero-meta {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    max-width: 700px;
+
+    margin-bottom: 14px;
+
+    font-size: 10px;
+    font-weight: 700;
+
+    letter-spacing: .16em;
+}
+
+.hero-meta span:last-child {
+    opacity: .7;
+}
+
+
+.hero h1 {
+    max-width: 760px;
+
+    font-size: clamp(38px, 8vw, 82px);
+
+    line-height: .92;
+
+    letter-spacing: -.045em;
+
+    font-weight: 700;
+}
+
+.hero h1 span {
+    color: #dce9ed;
+}
+
+
+.hero-content p {
+    max-width: 460px;
+
+    margin-top: 18px;
+
+    font-size: 14px;
+
+    line-height: 1.55;
+
+    color: rgba(255,255,255,.86);
+}
+
+
+/* SCROLL */
+
+.hero-scroll {
+    position: absolute;
+
+    z-index: 3;
+
+    right: 24px;
+    bottom: 30px;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: flex-end;
+
+    gap: 6px;
+
+    font-size: 9px;
+
+    letter-spacing: .12em;
+
+    text-transform: uppercase;
+
+    opacity: .75;
+}
+
+.scroll-arrow {
+    font-size: 20px;
+    line-height: 1;
+}
+
+
+/* =========================================
+   SERVICIOS
+========================================= */
+
+.featured-services {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    min-height: 53svh;
+}
+
+
+/* =========================================
+   SERVICE PANEL
+========================================= */
+
+.service-panel {
+    position: relative;
+
+    min-height: 500px;
+
+    overflow: hidden;
+
+    color: white;
+
+    transition:
+        flex var(--transition),
+        transform var(--transition),
+        filter var(--transition);
+
+    isolation: isolate;
+}
+
+
+/* PANEL 1 */
+
+.service-trade {
+    background:
+        radial-gradient(
+            circle at 80% 20%,
+            rgba(255,255,255,.16),
+            transparent 28%
+        ),
+        linear-gradient(
+            135deg,
+            var(--blue),
+            var(--blue-dark)
+        );
+}
+
+
+/* PANEL 2 */
+
+.service-restore {
+    background:
+        radial-gradient(
+            circle at 20% 15%,
+            rgba(255,255,255,.13),
+            transparent 25%
+        ),
+        linear-gradient(
+            135deg,
+            var(--wood-light),
+            var(--wood)
+        );
+}
+
+
+/* =========================================
+   DECORACIÓN PANEL 1
+========================================= */
+
+.service-decoration {
+    position: absolute;
+    inset: 0;
+
+    z-index: -1;
+
+    pointer-events: none;
+}
+
+.circle {
+    position: absolute;
+
+    display: block;
+
+    border-radius: 50%;
+
+    border: 1px solid rgba(255,255,255,.16);
+
+    transition: transform 1s ease;
+}
+
+.circle-one {
+    width: 430px;
+    height: 430px;
+
+    right: -180px;
+    top: -160px;
+}
+
+.circle-two {
+    width: 620px;
+    height: 620px;
+
+    right: -280px;
+    top: -250px;
+
+    border-color: rgba(255,255,255,.09);
+}
+
+
+/* =========================================
+   DECORACIÓN PANEL 2
+========================================= */
+
+.restore-shape {
+    position: absolute;
+
+    display: block;
+
+    border-radius: 50%;
+
+    border: 1px solid rgba(255,255,255,.15);
+
+    transition: transform 1s ease;
+}
+
+.restore-one {
+    width: 450px;
+    height: 450px;
+
+    left: -180px;
+    bottom: -200px;
+}
+
+.restore-two {
+    width: 650px;
+    height: 650px;
+
+    left: -280px;
+    bottom: -310px;
+
+    border-color: rgba(255,255,255,.08);
+}
+
+
+/* =========================================
+   SERVICE CONTENT
+========================================= */
+
+.service-content {
+    height: 100%;
+
+    min-height: 500px;
+
+    padding: 28px;
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: space-between;
+}
+
+
+/* HEADER */
+
+.service-header {
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+}
+
+.service-number {
+    font-size: 13px;
+
+    font-weight: 700;
+
+    letter-spacing: .08em;
+
+    opacity: .75;
+}
+
+.service-label {
+    padding: 8px 12px;
+
+    border: 1px solid rgba(255,255,255,.28);
+
+    border-radius: 100px;
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+    letter-spacing: .1em;
+
+    text-transform: uppercase;
+
+    background: rgba(255,255,255,.08);
+
+    backdrop-filter: blur(8px);
+}
+
+
+/* MAIN */
+
+.service-main {
+    max-width: 620px;
+}
+
+.service-main h2 {
+    font-size: clamp(42px, 5vw, 76px);
+
+    line-height: .9;
+
+    letter-spacing: -.05em;
+
+    margin-bottom: 24px;
+}
+
+.service-main h2 span {
+    display: block;
+
+    opacity: .62;
+}
+
+.service-main p {
+    max-width: 440px;
+
+    font-size: 14px;
+
+    line-height: 1.55;
+
+    color: rgba(255,255,255,.84);
+}
+
+
+/* FOOTER */
+
+.service-footer {
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    padding-top: 22px;
+
+    border-top: 1px solid rgba(255,255,255,.2);
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    letter-spacing: .04em;
+}
+
+.service-arrow {
+    width: 44px;
+    height: 44px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    border: 1px solid rgba(255,255,255,.3);
+
+    font-size: 18px;
+
+    transition: var(--transition);
+}
+
+
+/* =========================================
+   HOVER — DESKTOP
+========================================= */
+
+@media (min-width: 900px) {
+
+    .featured-services {
+        display: flex;
+    }
+
+    .service-panel {
+        flex: 1;
+    }
+
+    .service-panel:hover {
+        flex: 1.15;
+    }
+
+    .service-panel:hover .service-arrow {
+        transform: rotate(45deg) scale(1.1);
+        background: rgba(255,255,255,.14);
+    }
+
+    .service-panel:hover .circle-one {
+        transform: scale(1.15);
+    }
+
+    .service-panel:hover .restore-one {
+        transform: scale(1.15);
+    }
+
+    .service-panel:hover .service-content {
+        transform: translateY(-4px);
+    }
+
+    .service-content {
+        transition: transform var(--transition);
+    }
+
+}
+
+
+/* =========================================
+   MENÚ MOBILE
+========================================= */
+
+.mobile-menu {
+    position: fixed;
+
+    z-index: 100;
+
+    inset: 0;
+
+    background: var(--blue-dark);
+
+    color: white;
+
+    padding: 32px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    opacity: 0;
+    visibility: hidden;
+
+    transform: translateY(-20px);
+
+    transition: var(--transition);
+}
+
+.mobile-menu.active {
+    opacity: 1;
+    visibility: visible;
+
+    transform: translateY(0);
+}
+
+.close-menu {
+    position: absolute;
+
+    top: 22px;
+    right: 22px;
+
+    width: 52px;
+    height: 52px;
+
+    border-radius: 50%;
+
+    border: 1px solid rgba(255,255,255,.25);
+
+    background: transparent;
+
+    color: white;
+
+    font-size: 32px;
+
+    line-height: 1;
+
+    cursor: pointer;
+}
+
+.mobile-menu nav {
+    width: 100%;
+
+    max-width: 420px;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.mobile-menu nav a {
+    padding: 18px 0;
+
+    border-bottom: 1px solid rgba(255,255,255,.15);
+
+    font-size: 24px;
+
+    letter-spacing: -.02em;
+
+    transition: var(--transition);
+}
+
+.mobile-menu nav a:hover {
+    padding-left: 12px;
+
+    color: var(--blue-light);
+}
+
+
+/* =========================================
+   TABLET / DESKTOP
+========================================= */
+
+@media (min-width: 700px) {
+
+    .header {
+        padding: 24px 32px;
+    }
+
+    .hero-content {
+        padding-left: 6vw;
+        padding-bottom: 52px;
+    }
+
+    .hero-scroll {
+        right: 4vw;
+    }
+
+    .service-content {
+        padding: 34px;
+    }
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 899px) {
+
+    .hero {
+        height: 43svh;
+        min-height: 470px;
+    }
+
+    .hero-image {
+        background-position: center center;
+    }
+
+    .hero-overlay {
+        background:
+            linear-gradient(
+                90deg,
+                rgba(24,33,36,.78) 0%,
+                rgba(24,33,36,.35) 70%
+            ),
+            linear-gradient(
+                0deg,
+                rgba(24,33,36,.65) 0%,
+                transparent 65%
+            );
+    }
+
+    .hero-content {
+        padding-bottom: 34px;
+    }
+
+    .hero h1 {
+        font-size: clamp(38px, 11vw, 58px);
+    }
+
+    .hero-content p {
+        max-width: 350px;
+        font-size: 13px;
+    }
+
+    .hero-scroll {
+        display: none;
+    }
+
+
+    .featured-services {
+        grid-template-columns: 1fr;
+    }
+
+    .service-panel {
+        min-height: 390px;
+    }
+
+    .service-content {
+        min-height: 390px;
+
+        padding: 24px;
+    }
+
+    .service-main h2 {
+        font-size: clamp(40px, 12vw, 58px);
+    }
+
+    .service-main p {
+        font-size: 13px;
+    }
+
+}
+
+
+/* =========================================
+   ANIMATIONS
+========================================= */
+
+@keyframes heroReveal {
+
+    from {
+        opacity: 0;
+        transform: scale(1.06);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1.015);
+    }
+
+}
