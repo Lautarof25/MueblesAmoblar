@@ -344,6 +344,110 @@ button {
 }
 
 
+/* =========================================
+   SERVICIOS COMPLETOS
+========================================= */
+
+.services-section {
+    padding: 92px 24px 104px;
+    background: var(--cream);
+}
+
+.services-intro,
+.services-grid {
+    max-width: 1180px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.services-intro {
+    margin-bottom: 44px;
+}
+
+.services-intro h2 {
+    max-width: 720px;
+    color: var(--blue-dark);
+    font-size: clamp(42px, 6vw, 76px);
+    line-height: .92;
+    letter-spacing: -.05em;
+}
+
+.services-intro p {
+    max-width: 390px;
+    margin-top: 18px;
+    color: rgba(24,33,36,.68);
+    font-size: 14px;
+    line-height: 1.55;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 14px;
+}
+
+.service-list-card {
+    min-height: 292px;
+    padding: 26px;
+    border: 1px solid rgba(37,76,91,.14);
+    background: var(--white);
+}
+
+.service-list-card-highlight {
+    background: var(--blue-dark);
+    color: var(--white);
+}
+
+.service-list-number {
+    display: block;
+    margin-bottom: 54px;
+    color: var(--blue);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: .15em;
+}
+
+.service-list-card-highlight .service-list-number {
+    color: var(--blue-light);
+}
+
+.service-list-card h3 {
+    margin-bottom: 18px;
+    color: var(--blue-dark);
+    font-size: 24px;
+    letter-spacing: -.035em;
+}
+
+.service-list-card-highlight h3 {
+    color: var(--white);
+}
+
+.service-list-card ul {
+    display: grid;
+    gap: 9px;
+    padding: 0;
+    list-style: none;
+    color: rgba(24,33,36,.7);
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+.service-list-card li::before {
+    display: inline-block;
+    width: 16px;
+    color: var(--blue);
+    content: "—";
+}
+
+.service-list-card-highlight ul {
+    color: rgba(255,255,255,.76);
+}
+
+.service-list-card-highlight li::before {
+    color: var(--blue-light);
+}
+
+
 /* SECCIONES RESERVADAS */
 
 .future-section {
@@ -892,6 +996,28 @@ button {
 }
 
 @media (max-width: 600px) {
+
+    .services-section {
+        padding: 72px 20px 84px;
+    }
+
+    .services-intro {
+        margin-bottom: 32px;
+    }
+
+    .services-grid {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+    .service-list-card {
+        min-height: 0;
+        padding: 22px;
+    }
+
+    .service-list-number {
+        margin-bottom: 26px;
+    }
 
     .categories-section {
         padding: 72px 20px 84px;
