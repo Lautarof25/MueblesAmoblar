@@ -22,22 +22,25 @@
     <!-- HEADER -->
     <header class="header">
 
-        <a href="#inicio" class="logo" aria-label="Inicio">
-            <img src="logo.png" alt="Logo">
-        </a>
+        <div class="brand-lockup" aria-label="Marca del negocio">
+            <a href="#inicio" class="logo" aria-label="Inicio">
+                <img src="logo_amoblar.png" alt="Logo">
+            </a>
+            <span class="brand-tag">Desde 1998</span>
+        </div>
 
         <nav class="desktop-nav" aria-label="Navegación principal">
             <a href="#inicio" class="active" aria-current="page">Inicio</a>
             <a href="#parte-pago">Parte de pago</a>
             <a href="#restauracion">Restauración</a>
-            <a href="#servicios">Servicios</a>
+            <a href="#antes-despues">Antes y después</a>
             <a href="#categorias">Categorías</a>
             <a href="#quienes-somos">Quiénes somos</a>
-            <a href="#antes-despues">Antes y después</a>
+            <a href="#servicios">Servicios</a>
             <a href="#contacto">Contacto</a>
         </nav>
 
-        <a href="#contacto" class="header-action">Consultar</a>
+        <a href="https://wa.me/541132558002" target="_blank" rel="noopener" class="header-action">Consultar</a>
 
         <button
             class="menu-button"
@@ -196,51 +199,36 @@
 
         </section>
 
+        <section class="before-after-section" id="antes-despues" aria-labelledby="before-after-title">
 
-        <!-- =========================
-             SERVICIOS
-        ========================== -->
-
-        <section class="services-section" id="servicios" aria-labelledby="services-title">
-
-            <div class="services-intro">
-                <span class="section-eyebrow">03 / Servicios</span>
-                <h2 id="services-title">Hecho para tu espacio.</h2>
-                <p>Diseñamos, fabricamos y renovamos muebles con soluciones pensadas para vos.</p>
+            <div class="before-after-intro">
+                <span class="section-eyebrow">03 / Transformaciones</span>
+                <h2 id="before-after-title">El cambio se ve.</h2>
+                <p>Deslizá para descubrir el resultado de cada restauración.</p>
             </div>
 
-            <div class="services-grid">
+            <div class="comparison-viewer">
 
-                <article class="service-list-card">
-                    <span class="service-list-number">01</span>
-                    <h3>Diseño y fabricación</h3>
-                    <ul>
-                        <li>Sillones</li>
-                        <li>Mesas y sillas</li>
-                        <li>Muebles de pared</li>
-                        <li>Todo tipo de carpintería</li>
-                    </ul>
-                </article>
+                <div class="comparison-toolbar">
+                    <span class="comparison-counter" id="comparisonCounter">01 / 04</span>
+                    <div class="comparison-navigation" aria-label="Cambiar transformación">
+                        <button class="comparison-button" id="previousComparison" type="button" aria-label="Transformación anterior">←</button>
+                        <button class="comparison-button" id="nextComparison" type="button" aria-label="Siguiente transformación">→</button>
+                    </div>
+                </div>
 
-                <article class="service-list-card service-list-card-highlight">
-                    <span class="service-list-number">02</span>
-                    <h3>Soluciones a medida</h3>
-                    <ul>
-                        <li>Sillones personalizados</li>
-                        <li>Comedores</li>
-                        <li>Muebles a medida</li>
-                        <li>Respaldos de cama a medida</li>
-                    </ul>
-                </article>
-
-                <article class="service-list-card">
-                    <span class="service-list-number">03</span>
-                    <h3>Renovación y cuidado</h3>
-                    <ul>
-                        <li>Retapizados</li>
-                        <li>Restauraciones en general</li>
-                        <li>Encolado de sillas</li>
-                    </ul>
+                <article class="comparison-card">
+                    <div class="comparison-stage" style="--position: 50%;">
+                        <img id="beforeImage" src="antes1.jpeg" alt="Sillón antes de la restauración" class="comparison-image">
+                        <div class="comparison-after" aria-hidden="true">
+                            <img id="afterImage" src="despues1.jpeg" alt="" class="comparison-image">
+                        </div>
+                        <span class="comparison-label comparison-label-before">Antes</span>
+                        <span class="comparison-label comparison-label-after">Después</span>
+                        <span class="comparison-divider" aria-hidden="true"></span>
+                        <input class="comparison-range" id="comparisonRange" type="range" min="0" max="100" value="50" aria-label="Comparar antes y después">
+                    </div>
+                    <h3 id="comparisonTitle">Sillón modular</h3>
                 </article>
 
             </div>
@@ -311,8 +299,7 @@
 
         </section>
 
-
-        <!-- =========================
+                <!-- =========================
              QUIÉNES SOMOS
         ========================== -->
 
@@ -349,41 +336,60 @@
 
         </section>
 
-        <section class="before-after-section" id="antes-despues" aria-labelledby="before-after-title">
+                <!-- =========================
+             SERVICIOS
+        ========================== -->
 
-            <div class="before-after-intro">
-                <span class="section-eyebrow">06 / Transformaciones</span>
-                <h2 id="before-after-title">El cambio se ve.</h2>
-                <p>Deslizá para descubrir el resultado de cada restauración.</p>
+        <section class="services-section" id="servicios" aria-labelledby="services-title">
+
+            <div class="services-intro">
+                <span class="section-eyebrow">06 / Servicios</span>
+                <h2 id="services-title">Hecho para tu espacio.</h2>
+                <p>Diseñamos, fabricamos y renovamos muebles con soluciones pensadas para vos.</p>
             </div>
 
-            <div class="comparison-viewer">
+            <div class="services-grid">
 
-                <div class="comparison-toolbar">
-                    <span class="comparison-counter" id="comparisonCounter">01 / 04</span>
-                    <div class="comparison-navigation" aria-label="Cambiar transformación">
-                        <button class="comparison-button" id="previousComparison" type="button" aria-label="Transformación anterior">←</button>
-                        <button class="comparison-button" id="nextComparison" type="button" aria-label="Siguiente transformación">→</button>
-                    </div>
-                </div>
+                <article class="service-list-card">
+                    <span class="service-list-number">01</span>
+                    <h3>Diseño y fabricación</h3>
+                    <ul>
+                        <li>Sillones</li>
+                        <li>Mesas y sillas</li>
+                        <li>Muebles de pared</li>
+                        <li>Todo tipo de carpintería</li>
+                    </ul>
+                </article>
 
-                <article class="comparison-card">
-                    <div class="comparison-stage" style="--position: 50%;">
-                        <img id="beforeImage" src="antes1.jpeg" alt="Sillón antes de la restauración" class="comparison-image">
-                        <div class="comparison-after" aria-hidden="true">
-                            <img id="afterImage" src="despues1.jpeg" alt="" class="comparison-image">
-                        </div>
-                        <span class="comparison-label comparison-label-before">Antes</span>
-                        <span class="comparison-label comparison-label-after">Después</span>
-                        <span class="comparison-divider" aria-hidden="true"></span>
-                        <input class="comparison-range" id="comparisonRange" type="range" min="0" max="100" value="50" aria-label="Comparar antes y después">
-                    </div>
-                    <h3 id="comparisonTitle">Sillón modular</h3>
+                <article class="service-list-card service-list-card-highlight">
+                    <span class="service-list-number">02</span>
+                    <h3>Soluciones a medida</h3>
+                    <ul>
+                        <li>Sillones personalizados</li>
+                        <li>Comedores</li>
+                        <li>Muebles a medida</li>
+                        <li>Respaldos de cama a medida</li>
+                    </ul>
+                </article>
+
+                <article class="service-list-card">
+                    <span class="service-list-number">03</span>
+                    <h3>Renovación y cuidado</h3>
+                    <ul>
+                        <li>Retapizados</li>
+                        <li>Restauraciones en general</li>
+                        <li>Encolado de sillas</li>
+                    </ul>
                 </article>
 
             </div>
 
         </section>
+
+
+
+
+        
 
         <section class="contact-section" id="contacto" aria-labelledby="contact-title">
 
@@ -469,8 +475,8 @@
                 Restauración
             </a>
 
-            <a href="#servicios">
-                Servicios
+            <a href="#antes-despues">
+                Antes y después
             </a>
 
             <a href="#categorias">
@@ -481,8 +487,8 @@
                 Quiénes somos
             </a>
 
-            <a href="#antes-despues">
-                Antes y después
+            <a href="#servicios">
+                Servicios
             </a>
 
             <a href="#contacto">

@@ -74,6 +74,14 @@ button {
     padding: 12px 20px;
 }
 
+.brand-lockup {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2px;
+}
+
 .logo {
     display: flex;
     align-items: center;
@@ -81,7 +89,7 @@ button {
     width: 158px;
     height: 56px;
 
-    padding: 4px 0;
+    padding: 4px 0 0;
 
     background: transparent;
 
@@ -97,6 +105,19 @@ button {
 
 .logo:hover {
     transform: scale(1.02);
+}
+
+.brand-tag {
+    color: var(--blue-dark);
+    font-family: "Poiret One", cursive;
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    line-height: 1;
+    white-space: nowrap;
+    opacity: 1;
+    transform: translateY(-2px);
 }
 
 
