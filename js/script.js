@@ -29,6 +29,83 @@ function closeMobileMenu() {
 closeMenu.addEventListener("click", closeMobileMenu);
 
 
+const comparisonData = [
+    {
+        before: "antes1.jpeg",
+        after: "despues1.jpeg",
+        beforeAlt: "Sillón antes de la restauración",
+        title: "Sillón modular"
+    },
+    {
+        before: "antes2.jpeg",
+        after: "despues2.jpeg",
+        beforeAlt: "Mueble antes de la restauración",
+        title: "Renovación integral"
+    },
+    {
+        before: "antes3.jpeg",
+        after: "despues3.jpeg",
+        beforeAlt: "Sillón antes del retapizado",
+        title: "Retapizado"
+    },
+    {
+        before: "antes4_1.jpeg",
+        after: "despues4.jpeg",
+        beforeAlt: "Sillón de cuero antes de la restauración",
+        title: "Restauración de cuero"
+    }
+];
+
+const comparisonStage = document.querySelector(".comparison-stage");
+const comparisonRange = document.getElementById("comparisonRange");
+const beforeImage = document.getElementById("beforeImage");
+const afterImage = document.getElementById("afterImage");
+const comparisonTitle = document.getElementById("comparisonTitle");
+const comparisonCounter = document.getElementById("comparisonCounter");
+const previousComparison = document.getElementById("previousComparison");
+const nextComparison = document.getElementById("nextComparison");
+const beforeLabel = document.querySelector(".comparison-label-before");
+const afterLabel = document.querySelector(".comparison-label-after");
+let currentComparison = 0;
+
+function updateComparisonLabels() {
+    const position = Number(comparisonRange.value);
+
+    beforeLabel.hidden = position <= 15;
+    afterLabel.hidden = position >= 85;
+}
+
+function renderComparison() {
+
+    const comparison = comparisonData[currentComparison];
+
+    beforeImage.src = comparison.before;
+    beforeImage.alt = comparison.beforeAlt;
+    afterImage.src = comparison.after;
+    comparisonTitle.textContent = comparison.title;
+    comparisonCounter.textContent = `${String(currentComparison + 1).padStart(2, "0")} / ${String(comparisonData.length).padStart(2, "0")}`;
+    comparisonRange.value = "50";
+    comparisonStage.style.setProperty("--position", "50%");
+    updateComparisonLabels();
+
+}
+
+comparisonRange.addEventListener("input", () => {
+    comparisonStage.style.setProperty("--position", `${comparisonRange.value}%`);
+    updateComparisonLabels();
+});
+
+previousComparison.addEventListener("click", () => {
+    currentComparison = (currentComparison - 1 + comparisonData.length) % comparisonData.length;
+    renderComparison();
+});
+
+nextComparison.addEventListener("click", () => {
+    currentComparison = (currentComparison + 1) % comparisonData.length;
+    renderComparison();
+});
+
+
 // Cerrar al seleccionar una opción
 const mobileLinks = mobileMenu.querySelectorAll("a");
 

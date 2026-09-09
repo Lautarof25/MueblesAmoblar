@@ -141,7 +141,7 @@
 
 
             <!-- RESTAURACIÓN -->
-            <a href="#restauracion" id="restauracion" class="service-panel service-restore">
+            <a href="#antes-despues" id="restauracion" class="service-panel service-restore">
 
                 <div class="service-decoration">
                     <span class="restore-shape restore-one"></span>
@@ -200,11 +200,41 @@
             aria-label="Quiénes somos"
         ></section>
 
-        <section
-            class="future-section future-before-after"
-            id="antes-despues"
-            aria-label="Antes y después"
-        ></section>
+        <section class="before-after-section" id="antes-despues" aria-labelledby="before-after-title">
+
+            <div class="before-after-intro">
+                <span class="section-eyebrow">03 / Transformaciones</span>
+                <h2 id="before-after-title">El cambio se ve.</h2>
+                <p>Deslizá para descubrir el resultado de cada restauración.</p>
+            </div>
+
+            <div class="comparison-viewer">
+
+                <div class="comparison-toolbar">
+                    <span class="comparison-counter" id="comparisonCounter">01 / 04</span>
+                    <div class="comparison-navigation" aria-label="Cambiar transformación">
+                        <button class="comparison-button" id="previousComparison" type="button" aria-label="Transformación anterior">←</button>
+                        <button class="comparison-button" id="nextComparison" type="button" aria-label="Siguiente transformación">→</button>
+                    </div>
+                </div>
+
+                <article class="comparison-card">
+                    <div class="comparison-stage" style="--position: 50%;">
+                        <img id="beforeImage" src="antes1.jpeg" alt="Sillón antes de la restauración" class="comparison-image">
+                        <div class="comparison-after" aria-hidden="true">
+                            <img id="afterImage" src="despues1.jpeg" alt="" class="comparison-image">
+                        </div>
+                        <span class="comparison-label comparison-label-before">Antes</span>
+                        <span class="comparison-label comparison-label-after">Después</span>
+                        <span class="comparison-divider" aria-hidden="true"></span>
+                        <input class="comparison-range" id="comparisonRange" type="range" min="0" max="100" value="50" aria-label="Comparar antes y después">
+                    </div>
+                    <h3 id="comparisonTitle">Sillón modular</h3>
+                </article>
+
+            </div>
+
+        </section>
 
         <section
             class="future-section future-contact"
