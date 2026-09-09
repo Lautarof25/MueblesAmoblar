@@ -106,6 +106,57 @@ nextComparison.addEventListener("click", () => {
 });
 
 
+const categoryCards = document.querySelectorAll(".category-card");
+const imageModal = document.getElementById("imageModal");
+const imageModalClose = document.getElementById("imageModalClose");
+const imageModalPreview = document.getElementById("imageModalPreview");
+const imageModalTitle = document.getElementById("imageModalTitle");
+let lastCategoryCard;
+
+function closeImageModal() {
+
+    imageModal.hidden = true;
+    imageModalPreview.src = "";
+    document.body.style.overflow = mobileMenu.classList.contains("active") ? "hidden" : "";
+
+    if (lastCategoryCard) {
+        lastCategoryCard.focus();
+    }
+
+}
+
+categoryCards.forEach(categoryCard => {
+
+    categoryCard.addEventListener("click", event => {
+
+        event.preventDefault();
+
+        const categoryImage = categoryCard.querySelector("img");
+        const categoryName = categoryCard.querySelector(".category-name");
+
+        lastCategoryCard = categoryCard;
+        imageModalPreview.src = categoryImage.src;
+        imageModalPreview.alt = categoryImage.alt;
+        imageModalTitle.textContent = categoryName.textContent;
+        imageModal.hidden = false;
+        document.body.style.overflow = "hidden";
+        imageModalClose.focus();
+
+    });
+
+});
+
+imageModalClose.addEventListener("click", closeImageModal);
+
+imageModal.addEventListener("click", event => {
+
+    if (event.target === imageModal) {
+        closeImageModal();
+    }
+
+});
+
+
 // Cerrar al seleccionar una opción
 const mobileLinks = mobileMenu.querySelectorAll("a");
 
@@ -118,6 +169,11 @@ mobileLinks.forEach(link => {
 
 // Cerrar con ESC
 document.addEventListener("keydown", event => {
+
+    if (event.key === "Escape" && !imageModal.hidden) {
+        closeImageModal();
+        return;
+    }
 
     if (
         event.key === "Escape" &&

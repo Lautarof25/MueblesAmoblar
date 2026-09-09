@@ -458,6 +458,92 @@ button {
 
 
 /* =========================================
+   VISOR DE CATEGORÍAS
+========================================= */
+
+.image-modal {
+    position: fixed;
+    z-index: 200;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+    background: rgba(24,33,36,.84);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+}
+
+.image-modal[hidden] {
+    display: none;
+}
+
+.image-modal-content {
+    position: relative;
+    max-width: min(100%, 1080px);
+    max-height: 100%;
+}
+
+.image-modal-content img {
+    display: block;
+    width: auto;
+    max-width: 100%;
+    max-height: calc(100svh - 90px);
+    object-fit: contain;
+    box-shadow: 0 24px 60px rgba(0,0,0,.28);
+}
+
+.image-modal-content p {
+    margin-top: 12px;
+    color: var(--white);
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: .01em;
+}
+
+.image-modal-close {
+    position: absolute;
+    z-index: 1;
+    top: -16px;
+    right: -16px;
+    width: 44px;
+    height: 44px;
+    border: 1px solid rgba(255,255,255,.4);
+    border-radius: 50%;
+    background: var(--blue);
+    color: var(--white);
+    font-size: 28px;
+    line-height: 1;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.image-modal-close:hover,
+.image-modal-close:focus-visible {
+    background: var(--blue-light);
+    outline: none;
+    transform: scale(1.06);
+}
+
+@media (max-width: 600px) {
+
+    .image-modal {
+        padding: 18px;
+    }
+
+    .image-modal-content img {
+        max-height: calc(100svh - 70px);
+    }
+
+    .image-modal-close {
+        top: -12px;
+        right: -8px;
+    }
+
+}
+
+
+/* =========================================
    ANTES Y DESPUÉS
 ========================================= */
 
