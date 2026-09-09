@@ -6,10 +6,10 @@
 
     <meta
         name="description"
-        content="Muebles a medida, restauración, retapizado y muebles en parte de pago."
+        content="Renová tus muebles con nuestro servicio de parte de pago o recuperalos con restauración y retapizado."
     >
 
-    <title>Muebles · Restauración · Diseño</title>
+    <title>Parte de pago · Restauración</title>
 
     <link rel="stylesheet" href="css/styles.css">
 </head>
@@ -19,9 +19,18 @@
     <!-- HEADER -->
     <header class="header">
 
-        <a href="#" class="logo" aria-label="Inicio">
+        <a href="#inicio" class="logo" aria-label="Inicio">
             <img src="logo_amoblar.png" alt="Logo">
         </a>
+
+        <nav class="desktop-nav" aria-label="Navegación principal">
+            <a href="#inicio">Inicio</a>
+            <a href="#parte-pago">Parte de pago</a>
+            <a href="#restauracion">Restauración</a>
+            <a href="#quienes-somos">Quiénes somos</a>
+            <a href="#antes-despues">Antes y después</a>
+            <a href="#contacto">Contacto</a>
+        </nav>
 
         <button
             class="menu-button"
@@ -42,7 +51,7 @@
              HERO
         ========================== -->
 
-        <section class="hero">
+        <section class="hero" id="inicio">
 
             <div class="hero-image"></div>
 
@@ -51,7 +60,7 @@
             <div class="hero-content">
 
                 <div class="hero-meta">
-                    <span>MUEBLES · RESTAURACIÓN</span>
+                    <span>PARTE DE PAGO · RESTAURACIÓN</span>
                     <span>01 / 02</span>
                 </div>
 
@@ -64,8 +73,8 @@
                 </h1>
 
                 <p>
-                    Fabricamos, restauramos y transformamos muebles
-                    para que vuelvan a formar parte de tu hogar.
+                    Renovamos tus espacios y recuperamos los muebles
+                    que todavía tienen mucho para ofrecer.
                 </p>
 
             </div>
@@ -82,10 +91,10 @@
              SERVICIOS DESTACADOS
         ========================== -->
 
-        <section class="featured-services">
+        <section class="featured-services" aria-label="Nuestros servicios">
 
             <!-- PARTE DE PAGO -->
-            <a href="#" class="service-panel service-trade">
+            <a href="#parte-pago" id="parte-pago" class="service-panel service-trade">
 
                 <div class="service-decoration">
                     <span class="circle circle-one"></span>
@@ -105,13 +114,14 @@
                     <div class="service-main">
 
                         <h2>
-                            Cambialo.
-                            <span>Llevate uno nuevo.</span>
+                            Renovalo.
+                            <span>Usalo como parte de pago.</span>
                         </h2>
 
                         <p>
-                            Traé tu mueble antiguo. Acordamos su valor
-                            y usalo como parte de pago para renovar tu espacio.
+                            Retiramos y evaluamos tus muebles viejos para
+                            que puedas aplicar su valor a una nueva compra,
+                            con un descuento a tu medida.
                         </p>
 
                     </div>
@@ -134,7 +144,7 @@
 
 
             <!-- RESTAURACIÓN -->
-            <a href="#" class="service-panel service-restore">
+            <a href="#restauracion" id="restauracion" class="service-panel service-restore">
 
                 <div class="service-decoration">
                     <span class="restore-shape restore-one"></span>
@@ -154,13 +164,14 @@
                     <div class="service-main">
 
                         <h2>
-                            Conserválo.
+                            Recuperalo.
                             <span>Volvé a disfrutarlo.</span>
                         </h2>
 
                         <p>
-                            Restauramos, retapizamos y recuperamos muebles
-                            que tienen historia, valor o significado.
+                            Restauramos muebles de madera, sillones y
+                            retapizados para devolverles su forma, su valor
+                            y la historia que los hace únicos.
                         </p>
 
                     </div>
@@ -183,6 +194,27 @@
 
         </section>
 
+
+        <!-- SECCIONES RESERVADAS PARA CONTENIDO FUTURO -->
+
+        <section
+            class="future-section future-about"
+            id="quienes-somos"
+            aria-label="Quiénes somos"
+        ></section>
+
+        <section
+            class="future-section future-before-after"
+            id="antes-despues"
+            aria-label="Antes y después"
+        ></section>
+
+        <section
+            class="future-section future-contact"
+            id="contacto"
+            aria-label="Contacto"
+        ></section>
+
     </main>
 
 
@@ -200,25 +232,29 @@
             ×
         </button>
 
-        <nav>
+        <nav aria-label="Navegación mobile">
 
-            <a href="#">
+            <a href="#inicio">
                 Inicio
             </a>
 
-            <a href="#">
+            <a href="#parte-pago">
                 Parte de pago
             </a>
 
-            <a href="#">
+            <a href="#restauracion">
                 Restauración
             </a>
 
-            <a href="#">
-                Muebles a medida
+            <a href="#quienes-somos">
+                Quiénes somos
             </a>
 
-            <a href="#">
+            <a href="#antes-despues">
+                Antes y después
+            </a>
+
+            <a href="#contacto">
                 Contacto
             </a>
 
