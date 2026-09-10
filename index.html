@@ -4,11 +4,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="preload" href="hero.webp" as="image" fetchpriority="high">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <meta name="description"
         content="Renová tus muebles con nuestro servicio de parte de pago o recuperalos con restauración y retapizado.">
 
     <link rel="canonical" href="https://lautarof25.github.io/MueblesAmoblar/">
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poiret+One&display=swap" rel="stylesheet">
 
     <meta property="og:locale" content="es_AR">
     <meta property="og:type" content="website">
@@ -31,15 +38,8 @@
     <meta name="twitter:image" content="https://lautarof25.github.io/MueblesAmoblar/og_image.jpg">
     <meta name="twitter:image:alt" content="Mueble restaurado en un ambiente de una casa">
 
-    <title>Parte de pago · Restauración</title>
-
-    <link rel="icon" type="image/png" href="favicon.png">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poiret+One&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/styles.css">
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <title>Muebles Amoblar | Restauraciones</title>
+    
 
 </head>
 
@@ -549,7 +549,9 @@
 
     <script src="js/script.js"></script>
     <script>
-        AOS.init();
+        AOS.init({
+            throttleDelay: 250,
+        });
     </script>
 
 </body>
