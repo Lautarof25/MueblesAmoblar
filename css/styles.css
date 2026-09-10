@@ -577,6 +577,24 @@ button {
     line-height: 1;
 }
 
+.about-manufacturers {
+    max-width: 620px;
+    margin-top: 22px;
+    color: var(--blue-dark);
+    font-size: 18px;
+    line-height: 1.45;
+}
+
+.about-manufacturers strong {
+    display: inline-block;
+    padding: 4px 9px;
+    background: var(--blue-dark);
+    color: var(--white);
+    font-size: .88em;
+    letter-spacing: .04em;
+    text-transform: uppercase;
+}
+
 .about-pillars {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -601,6 +619,44 @@ button {
     color: rgba(24,33,36,.66);
     font-size: 12px;
     line-height: 1.45;
+}
+
+.fabrication-gallery {
+    grid-column: 1 / -1;
+    display: grid;
+    grid-template-columns: minmax(180px, .55fr) minmax(0, 1.45fr);
+    gap: clamp(24px, 5vw, 72px);
+    align-items: end;
+    padding-top: 18px;
+    border-top: 1px solid rgba(37,76,91,.2);
+}
+
+.fabrication-gallery-header h3 {
+    max-width: 220px;
+    color: var(--blue-dark);
+    font-size: clamp(28px, 3vw, 44px);
+    line-height: .95;
+    letter-spacing: -.04em;
+}
+
+.fabrication-gallery-images {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 12px;
+}
+
+.fabrication-gallery-images img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    filter: saturate(.86);
+    transition: transform var(--transition), filter var(--transition);
+}
+
+.fabrication-gallery-images img:hover {
+    filter: saturate(1);
+    transform: translateY(-5px);
 }
 
 .future-before-after {
@@ -1715,6 +1771,26 @@ button {
     .about-pillars {
         grid-template-columns: 1fr;
         gap: 18px;
+    }
+
+    .fabrication-gallery {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+
+    .fabrication-gallery-header h3 {
+        max-width: none;
+    }
+
+    .fabrication-gallery-images {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+    .fabrication-gallery-images img {
+        width: 100%;
+        min-width: 0;
     }
 
     .contact-section {
