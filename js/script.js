@@ -31,26 +31,26 @@ closeMenu.addEventListener("click", closeMobileMenu);
 
 const comparisonData = [
     {
-        before: "antes1.webp",
-        after: "despues1.webp",
+        before: "antesdespues/antes1.webp",
+        after: "antesdespues/despues1.webp",
         beforeAlt: "Sillón antes de la restauración",
         title: "Sillón modular"
     },
     {
-        before: "antes2.webp",
-        after: "despues2.webp",
+        before: "antesdespues/antes2.webp",
+        after: "antesdespues/despues2.webp",
         beforeAlt: "Mueble antes de la restauración",
         title: "Renovación integral"
     },
     {
-        before: "antes3.webp",
-        after: "despues3.webp",
+        before: "antesdespues/antes3.webp",
+        after: "antesdespues/despues3.webp",
         beforeAlt: "Sillón antes del retapizado",
         title: "Retapizado"
     },
     {
-        before: "antes4_1.webp",
-        after: "despues4.webp",
+        before: "antesdespues/antes4_1.webp",
+        after: "antesdespues/despues4.webp",
         beforeAlt: "Sillón de cuero antes de la restauración",
         title: "Restauración de cuero"
     }
