@@ -31,29 +31,42 @@ closeMenu.addEventListener("click", closeMobileMenu);
 
 const comparisonData = [
     {
-        before: "antesdespues/antes1.webp",
-        after: "antesdespues/despues1.webp",
+        before: "antesdespues/antes1.avif",
+        after: "antesdespues/despues1.avif",
         beforeAlt: "Sillón antes de la restauración",
         title: "Sillón modular"
     },
     {
-        before: "antesdespues/antes2.webp",
-        after: "antesdespues/despues2.webp",
+        before: "antesdespues/antes2.avif",
+        after: "antesdespues/despues2.avif",
         beforeAlt: "Mueble antes de la restauración",
         title: "Renovación integral"
     },
     {
-        before: "antesdespues/antes3.webp",
-        after: "antesdespues/despues3.webp",
+        before: "antesdespues/antes3.avif",
+        after: "antesdespues/despues3.avif",
         beforeAlt: "Sillón antes del retapizado",
         title: "Retapizado"
     },
     {
-        before: "antesdespues/antes4_1.webp",
-        after: "antesdespues/despues4.webp",
+        before: "antesdespues/antes4.avif",
+        after: "antesdespues/despues4.avif",
         beforeAlt: "Sillón de cuero antes de la restauración",
         title: "Restauración de cuero"
-    }
+    },
+    {
+        before: "antesdespues/antes5.avif",
+        after: "antesdespues/despues5.avif",
+        beforeAlt: "Sillón antes del retapizado",
+        title: "Retapizado"
+    },
+    {
+        before: "antesdespues/antes6.avif",
+        after: "antesdespues/despues6.avif",
+        beforeAlt: "Reposapies antes del retapizado",
+        title: "Retapizado y restaurado"
+    },
+    
 ];
 
 const comparisonStage = document.querySelector(".comparison-stage");
