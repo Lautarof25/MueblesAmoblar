@@ -66,6 +66,12 @@ const comparisonData = [
         beforeAlt: "Reposapies antes del retapizado",
         title: "Retapizado y restaurado"
     },
+    {
+        before: "antesdespues/antes7.avif",
+        after: "antesdespues/despues7.avif",
+        beforeAlt: "Reposapies antes del retapizado",
+        title: "Retapizado y restaurado"
+    },
     
 ];
 
