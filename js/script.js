@@ -72,7 +72,36 @@ const comparisonData = [
         beforeAlt: "Reposapies antes del retapizado",
         title: "Retapizado y restaurado"
     },
-    
+    {
+        before: "antesdespues/antes8.avif",
+        after: "antesdespues/despues8.avif",
+        beforeAlt: "Sillón cuero",
+        title: "Retapizado y restaurado"
+    },
+    {
+        before: "antesdespues/antes9.avif",
+        after: "antesdespues/despues9.avif",
+        beforeAlt: "Silla cebra",
+        title: "Retapizado y restaurado"
+    },
+    {
+        before: "antesdespues/antes10.avif",
+        after: "antesdespues/despues10.avif",
+        beforeAlt: "Sillones negro",
+        title: "Retapizado y restaurado"
+    },
+    {
+        before: "antesdespues/antes11.avif",
+        after: "antesdespues/despues11.avif",
+        beforeAlt: "Sillón negro",
+        title: "Retapizado y restaurado"
+    },
+    {
+        before: "antesdespues/antes12.avif",
+        after: "antesdespues/despues12.avif",
+        beforeAlt: "Sillón gris",
+        title: "Retapizado y restaurado"
+    },
 ];
 
 const comparisonStage = document.querySelector(".comparison-stage");
