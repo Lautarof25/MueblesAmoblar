@@ -102,6 +102,12 @@ const comparisonData = [
         beforeAlt: "Sillón gris",
         title: "Retapizado y restaurado"
     },
+    {
+        before: "antesdespues/antes13.avif",
+        after: "antesdespues/despues13.avif",
+        beforeAlt: "Sillón gris",
+        title: "Retapizado y restaurado"
+    },
 ];
 
 const comparisonStage = document.querySelector(".comparison-stage");
